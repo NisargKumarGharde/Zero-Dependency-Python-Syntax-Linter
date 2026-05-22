@@ -30,14 +30,6 @@ def check_python_syntax(filepath):
     except Exception as e:
         print("\nAn unexpected error occurred: {}".format(e))
 
-def main():
-    '''
-    Main function to run the syntax checker tool.
-    '''
-    # Accept the file path of a Python script from the user. 
-    file_path = input("Enter the path of the Python script to check: ")
-    check_python_syntax(file_path)
-
 if __name__ == "__main__":
     # Set up argument parser
     parser = argparse.ArgumentParser(description="Lightweight Python Syntax Linter")
