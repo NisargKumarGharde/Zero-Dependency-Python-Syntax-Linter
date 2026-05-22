@@ -1,3 +1,5 @@
+import argparse
+
 def check_python_syntax(filepath):
     '''
     Reads a Python script from the given filepath and checks its syntax.
@@ -37,4 +39,13 @@ def main():
     check_python_syntax(file_path)
 
 if __name__ == "__main__":
-    main()
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description="Lightweight Python Syntax Linter")
+    parser.add_argument(
+        "-f", "--file", 
+        required=True, 
+        help="Path to the Python (.py) file to check"
+    )
+    
+    args = parser.parse_args()
+    check_python_syntax(args.file)
