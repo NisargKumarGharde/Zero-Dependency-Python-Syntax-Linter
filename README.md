@@ -1,37 +1,22 @@
-### Problem Statement 1
-# *Python-Syntax-Checker-Tool*
+# Lightweight Python Syntax Linter
 
-This project focuses on creating a Python utility that reads the contents of .py file and checks for syntax errors using the built-in compile() function. It helps students detect mistakes in their code before execution.
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height="48" alt="Python" title="Python" /> &nbsp;
+</p>
 
-*Part of my college IIT Patna tied up with GUVI(HCL) internship.
+## Project Overview
+A lightweight, zero-dependency command-line utility designed to statically analyze Python (`.py`) scripts for syntax errors prior to runtime execution. By leveraging Python's built-in `compile()` function, this tool provides instant feedback on code validity, making it a fast pre-commit check or CI/CD pipeline step.
 
-## *Do this before running the program
-Before opening my *.py* file in any IDE, disable any code assist (eg. GitHub Copilot, Gemini Code Assist, or other).
+## Features
+- **Zero External Dependencies:** Built entirely using the Python Standard Library.
+- **Fast Static Analysis:** Evaluates the Abstract Syntax Tree (AST) directly via `compile()` without actually executing the code.
+- **Precise Error Reporting:** Catches `SyntaxError` exceptions and outputs the exact file name, line number, and error message.
+- **Robust Exception Handling:** Gracefully handles missing files and invalid paths.
 
-### *Description:*
+## Quick Start
 
-1. Accept the file path of a Python script from the user
-2. Read the entire file content
-3. Use the *compile()* function to validate the syntax
-4. If a syntax error is detected, display the error message with the line number
-5. If no errors are found, display a success message indicating the file is valid
-
-### *Functional Components:*
-
-1. File input through user prompt
-2. Read and store script content using file handling
-3. Validate syntax using *compile()*
-4. Catch syntax errors using *try-except*
-5. Display result to the user with appropriate message
-
-## *Note:*
-
-1. Use IDE you prefer from the following: VS Code, Jupyter, Google Colab or JetBrains
-2. Use Python code terminal if possible for better viewing of sample test syntaxes provided.
-3. Use Python version (eg. Python 3.8 or more)
-4. Read the commented part in the code, to avoid any confusion.
-
-### **Also*
-Sorry for any inconvenience if caused while reviewing the project.
-
-# THANK YOU
+1. Clone the repository and navigate to the directory.
+2. Run the linter against any Python script using the `-f` (file) flag:
+   ```bash
+   python "Python Syntax Checker.py" -f "Sample Test Cases.py"
+   ```
